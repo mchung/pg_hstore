@@ -17,8 +17,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "pg_hstore"
   gem.homepage = "http://github.com/mchung/pg_hstore"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{Use the hstore with ActiveRecord}
+  gem.description = %Q{Ever wanted to use nosql with pgsql? Now you can}
   gem.email = "mchung@gmail.com"
   gem.authors = ["Marc Chung"]
   # dependencies defined in Gemfile
