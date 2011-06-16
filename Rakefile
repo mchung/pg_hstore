@@ -38,12 +38,20 @@ end
 
 task :default => :spec
 
-require 'rake/rdoctask'
-Rake::RDocTask.new do |rdoc|
-  version = File.exist?('VERSION') ? File.read('VERSION') : ""
+require 'yard'
+YARD::Rake::YardocTask.new
 
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "pg_hstore #{version}"
-  rdoc.rdoc_files.include('README*')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+task :createdb do
+  config = YAML.load_file("./database.yml")
+  `createdb #{config[:database]} -O #{config[:username]}`
+end
+
+task :dropdb do
+  config = YAML.load_file("./database.yml")
+  `dropdb #{config[:database]}`
+end
+
+task :hstore_setup do
+  config = YAML.load_file("./database.yml")
+  `psql #{config[:database]} -f ./hstore/hstore-1.15.sql`
 end

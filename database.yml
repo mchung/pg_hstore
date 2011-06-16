@@ -1,0 +1,3 @@
+--- 
+  :database: pg_hstore_test
+  :username: postgres

@@ -1,0 +1,2 @@
+1. Write a generator that installs hstore-1.15.sql and creates a setup_hstore migration
+2. 
