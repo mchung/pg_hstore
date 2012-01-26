@@ -1,6 +1,6 @@
 = pg_hstore
 
-Description goes here.
+My documentation is weak, but my specs are strong. {Read ze specs}[https://github.com/mchung/pg_hstore/spec].
 
 == Contributing to pg_hstore
  
